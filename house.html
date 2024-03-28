@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>House Visualization</title>
+<style>
+  /* Основание дома */
+  .house-base {
+    width: 200px;
+    height: 150px;
+    background-color: #d2b48c; /* Цвет коричневый */
+    position: relative;
+    margin: 100px auto 0; /* Центрирование основания дома */
+  }
+
+  /* Крыша */
+  .roof {
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 50px solid #808080; /* Цвет серый */
+    position: absolute;
+    top: -50px; /* Отступ крыши над основанием дома */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Окно */
+  .window {
+    width: 50px;
+    height: 50px;
+    background-color: #add8e6; /* Цвет голубой */
+    border-radius: 50%; /* Создание круглой формы */
+    position: absolute;
+    top: 25px; /* Отступ окна от верхней части основания */
+    left: 25%; /* Позиционирование окна по горизонтали */
+    transform: translateX(-50%);
+  }
+
+  /* Дверь */
+  .door {
+    width: 40px;
+    height: 90px;
+    background-color: #8b4513; /* Цвет коричневый */
+    position: absolute;
+    bottom: 0;
+    left: 80%; /* Позиционирование двери по горизонтали */
+    transform: translateX(-50%);
+  }
+
+  /* Дымоход */
+  .chimney {
+    width: 20px;
+    height: 60px;
+    background-color: #696969; /* Цвет темно-серый */
+    position: absolute;
+    top: -60px; /* Отступ дымохода над крышей */
+    left: 30%; /* Позиция дымохода по горизонтали */
+  }
+</style>
+</head>
+<body>
+<div class="house-base">
+  <div class="roof"></div>
+  <div class="window"></div>
+  <div class="door"></div>
+  <div class="chimney"></div>
+</div>
+</body>
+</html>
